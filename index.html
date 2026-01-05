@@ -1,11 +1,54 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Is a Knife Fight — I Teach Risk, Timing, and Execution</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+    /* ===== HERO ONLY override (doesn't touch other sections) ===== */
+header.hero-header{
+  height: auto !important;
+  padding: 120px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+header.hero-header .hero-content{
+  max-width: 920px !important;
+  margin: 0 auto !important;
+  padding: 0 22px !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+header.hero-header .hero-proof{
+  display:flex !important;
+  gap: 18px !important;
+  justify-content:center !important;
+  flex-wrap:wrap !important;
+  margin: 18px auto 26px !important;
+}
+
+header.hero-header .proof-item{
+  min-width: 260px;
+  border: 1px solid var(--border-gold);
+  background: rgba(0,0,0,0.30);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+
+header.hero-header .proof-item.proof-wide{
+  min-width: 460px;
+}
+
+@media (max-width: 768px){
+  header.hero-header{ padding: 95px 0 !important; }
+  header.hero-header .proof-item{ min-width: 220px; }
+  header.hero-header .proof-item.proof-wide{ min-width: 220px; }
+}
+ <style>
         * {
             margin: 0;
             padding: 0;
@@ -665,105 +708,6 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
         }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            h1 {
-                font-size: 3.5rem;
-            }
-
-            h2 {
-                font-size: 2.2rem;
-            }
-
-            .split-layout {
-                gap: 50px;
-            }
-        }
-
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 3rem;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .grid-layout {
-                grid-template-columns: 1fr 1fr;
-                gap: 40px;
-            }
-
-            .split-layout {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
-
-            .decorative-border {
-                width: 600px;
-                height: 600px;
-            }
-        }
-
-        @media (max-width: 768px) 
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            h3 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .section {
-                padding: 80px 0;
-            }
-
-            .grid-layout {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .luxury-card {
-                padding: 40px 30px;
-            }
-
-            .cta-button {
-                padding: 18px 10px;
-                font-size: 1rem;
-                width: 100%;
-            }
-
-            .quote-section {
-                padding: 50px 30px;
-            }
-
-            .quote-section::before,
-            .quote-section::after {
-                font-size: 5rem;
-            }
-
-            .quote-text {
-                font-size: 1.2rem;
-            }
-
-            .decorative-border {
-                width: 400px;
-                height: 400px;
-            }
-
-            .split-layout {
-                margin: 60px 0;
-            }
-            
             /* Reduce mobile element density */
             .bitcoin-symbol:nth-child(3),
             .bitcoin-symbol:nth-child(4),
@@ -884,29 +828,10 @@
   font-size: 0.92rem;
 }
 
-.hero-header{
-  padding: 120px 0;
-  height: auto;
-}
-
 @media (max-width: 768px){
   .proof-item{ min-width: 160px; }
-  .hero-header{ padding: 95px 0; }
-}
+
             /* ===== HERO OVERRIDE (Clean like reference) ===== */
-.hero-header{
-  height: auto !important;
-  padding: 120px 0 !important;
-  background: linear-gradient(180deg, rgba(0,0,0,0.78), rgba(0,0,0,0.92)) !important;
-}
-
-.hero-content{
-  text-align:center;
-  max-width: 920px !important;
-  margin: 0 auto;
-  padding: 0 22px;
-}
-
 .hero-kicker{
   display:inline-block;
   border: 1px solid var(--border-gold);
