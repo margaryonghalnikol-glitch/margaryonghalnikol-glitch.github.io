@@ -1042,6 +1042,86 @@ header.hero-header .proof-item.proof-wide{
     max-width: 100% !important;
     min-width: 0 !important;
   }
+/* ===== FINAL HERO LAYOUT (LEFT ALIGNED, CLEAN) ===== */
+
+header.hero-header{
+  text-align: left !important;
+}
+
+header.hero-header .hero-content{
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  text-align: left !important;
+}
+
+header.hero-header h1,
+header.hero-header p,
+header.hero-header .hero-subhead,
+header.hero-header .hero-body,
+header.hero-header .hero-note{
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* proof cards side by side */
+header.hero-header .hero-proof{
+  display: flex !important;
+  gap: 18px !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  flex-wrap: wrap !important;
+  margin: 24px 0 !important;
+}
+
+header.hero-header .proof-item{
+  flex: 0 0 auto !important;
+  min-width: 260px !important;
+  max-width: 360px !important;
+  background: rgba(0,0,0,0.28) !important;
+  border: 1px solid var(--border-gold) !important;
+  border-radius: 16px !important;
+  padding: 16px 18px !important;
+}
+
+/* mobile: stack proof cards */
+@media (max-width: 768px){
+  header.hero-header .proof-item{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+/* ===== FINAL HERO BACKGROUND (DARK GOLD PREMIUM) ===== */
+
+header.hero-header{
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(212,175,55,0.10), transparent 55%),
+    radial-gradient(circle at 75% 70%, rgba(212,175,55,0.06), transparent 60%),
+    linear-gradient(180deg, #050505 0%, #0b0b0b 100%) !important;
+}
+
+/* soften decorations */
+header.hero-header .decorative-border{
+  opacity: 0.25 !important;
+}
+
+header.hero-header .hexagon-grid{
+  opacity: 0.04 !important;
+}
+
+header.hero-header .bitcoin-symbol,
+header.hero-header .crypto-coin{
+  opacity: 0.025 !important;
+}
+
+header.hero-header .crypto-lines{
+  opacity: 0.15 !important;
+}
+
+header.hero-header .glowing-orb{
+  opacity: 0.08 !important;
+}
 
     </style>
 </head>
