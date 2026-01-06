@@ -1001,7 +1001,47 @@ header.hero-header .crypto-lines{
 header.hero-header .glowing-orb{
   opacity: 0.10 !important;
 }
+/* ===== HERO HARD RESET: stop columns ===== */
+header.hero-header .hero-content{
+  display: block !important;      /* 禁止 grid/flex 分栏 */
+  text-align: left !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+}
 
+header.hero-header .hero-cta{
+  display: block !important;      /* 按钮不要跑右边 */
+}
+
+header.hero-header .cta-button{
+  display: inline-block !important;
+}
+     /* ===== HERO proof side-by-side ===== */
+header.hero-header .hero-proof{
+  display: flex !important;
+  gap: 16px !important;
+  justify-content: flex-start !important;
+  flex-wrap: wrap !important;
+  margin: 18px 0 22px !important;
+}
+
+header.hero-header .proof-item{
+  flex: 0 0 auto !important;
+  min-width: 260px !important;
+  max-width: 420px !important;
+}
+
+header.hero-header .proof-item.proof-wide{
+  max-width: 520px !important;
+}
+
+@media (max-width: 768px){
+  header.hero-header .proof-item,
+  header.hero-header .proof-item.proof-wide{
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
 
     </style>
 </head>
@@ -1037,21 +1077,18 @@ header.hero-header .glowing-orb{
     </p>
 
   <div class="hero-proof">
-    <div class="proof-item">
-      <span class="proof-num">10+</span>
-      <span class="proof-label">Years trading</span>
-    </div>
-
-    <div class="proof-item proof-wide">
-      <span class="proof-num">1,000+</span>
-      <span class="proof-label">Traders reached 7-figure profits</span>
-    </div>
+    <div class="hero-proof">
+  <div class="proof-item">
+    <span class="proof-num">10+</span>
+    <span class="proof-label">Years trading</span>
   </div>
+
   <div class="proof-item proof-wide">
     <span class="proof-num">1,000+</span>
     <span class="proof-label">Traders reached 7-figure profits</span>
   </div>
 </div>
+
 
     <p class="hero-body">
       Here’s the truth nobody tells you:<br>
