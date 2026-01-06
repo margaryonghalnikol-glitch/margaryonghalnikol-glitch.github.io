@@ -44,14 +44,14 @@ header.hero-header .proof-item{
 header.hero-header .proof-item.proof-wide{
   min-width: 460px;
 }
-
-{
+/* Mobile adjustments (must be inside @media) */
+@media (max-width: 768px){
   header.hero-header{ padding: 95px 0 !important; }
- <div class="hero-proof">
-     header.hero-header .proof-item{ min-width: 220px; }
+  header.hero-header .proof-item{ min-width: 220px; }
   header.hero-header .proof-item.proof-wide{ min-width: 220px; }
-</div>
-        * {
+}
+
+     * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
