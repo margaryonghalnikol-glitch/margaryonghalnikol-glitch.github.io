@@ -1124,6 +1124,94 @@ header.hero-header .glowing-orb{
 }
 
     </style>
+    <style>
+/* =========================================================
+    HERO 强制布局修正（只作用首页第一屏，不影响其他区块）
+   安全：只覆盖 hero-header 内部
+   ========================================================= */
+
+/* 【1】整体强制左对齐 */
+header.hero-header,
+header.hero-header * {
+  text-align: left !important;
+}
+
+/* 【2】Hero 内容最大宽度 & 居中容器 */
+header.hero-header .hero-content{
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  position: relative !important;
+  z-index: 5 !important;
+}
+
+/* 【3】标题不居中（像参考图） */
+header.hero-header h1{
+  text-align: left !important;
+  margin-bottom: 18px !important;
+}
+
+/* 【4】副标题、正文左对齐 */
+header.hero-header .hero-subhead,
+header.hero-header .hero-body,
+header.hero-header .hero-note{
+  text-align: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 【5】两个 proof 并排（关键） */
+header.hero-header .hero-proof{
+  display: flex !important;
+  gap: 18px !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  flex-wrap: wrap !important;
+  margin: 26px 0 30px !important;
+}
+
+/* 单个 proof 样式 */
+header.hero-header .proof-item{
+  flex: 0 0 auto !important;
+  min-width: 260px !important;
+  max-width: 360px !important;
+  border: 1px solid rgba(212,175,55,0.28) !important;
+  background: rgba(0,0,0,0.30) !important;
+  border-radius: 16px !important;
+  padding: 16px 18px !important;
+}
+
+/* 宽的那个 proof */
+header.hero-header .proof-item.proof-wide{
+  max-width: 520px !important;
+}
+
+/* 【6】Hero 背景：干净黑金渐变 + 暗金光晕 */
+header.hero-header{
+  position: relative !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(212,175,55,0.10), transparent 55%),
+    radial-gradient(circle at 75% 70%, rgba(212,175,55,0.06), transparent 60%),
+    linear-gradient(180deg, #050505 0%, #0b0b0b 100%) !important;
+}
+
+/* 【7】弱化所有背景装饰（高级、干净） */
+header.hero-header .decorative-border{ opacity: 0.22 !important; }
+header.hero-header .hexagon-grid{ opacity: 0.04 !important; }
+header.hero-header .bitcoin-symbol,
+header.hero-header .crypto-coin{ opacity: 0.02 !important; }
+header.hero-header .crypto-lines{ opacity: 0.12 !important; }
+header.hero-header .glowing-orb{ opacity: 0.08 !important; }
+
+/* 【8】手机端：proof 自动变竖排 */
+@media (max-width: 768px){
+  header.hero-header .proof-item{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+</style>
 </head>
 <body>
     <!-- Hero Header -->
