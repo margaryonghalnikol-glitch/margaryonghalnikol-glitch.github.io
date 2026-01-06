@@ -5,39 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Is a Knife Fight — I Teach Risk, Timing, and Execution</title>
    
-header.hero-header .hero-proof{
-  display: flex !important;
-  gap: 14px !important;
-  justify-content: flex-start !important;
-  align-items: stretch !important;
-  flex-wrap: wrap !important;
-  margin: 18px 0 24px !important;
-}
-
-header.hero-header .proof-item{
-  width: auto !important;
-  flex: 0 0 auto !important;
-  min-width: 260px;
-  max-width: 360px;
-  border: 1px solid var(--border-gold);
-  background: rgba(0,0,0,0.28);
-  border-radius: 16px;
-  padding: 14px 16px;
-}
-
-header.hero-header .proof-item.proof-wide{
-  max-width: 520px;
-}
-
-@media (max-width: 768px){
-  header.hero-header .hero-content{ text-align: left !important; }
-  header.hero-header .proof-item,
-  header.hero-header .proof-item.proof-wide{
-    min-width: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
 
  <style>
     /* ===== HERO ONLY override (doesn't touch other sections) ===== */
@@ -948,6 +915,39 @@ header.hero-header .proof-item.proof-wide{
  /* ===== HERO ONLY fix (match reference look) ===== */
 header.hero-header .hero-content{
   text-align: left !important;
+}
+header.hero-header .hero-proof{
+  display: flex !important;
+  gap: 14px !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  flex-wrap: wrap !important;
+  margin: 18px 0 24px !important;
+}
+
+header.hero-header .proof-item{
+  width: auto !important;
+  flex: 0 0 auto !important;
+  min-width: 260px;
+  max-width: 360px;
+  border: 1px solid var(--border-gold);
+  background: rgba(0,0,0,0.28);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+header.hero-header .proof-item.proof-wide{
+  max-width: 520px;
+}
+
+@media (max-width: 768px){
+  header.hero-header .hero-content{ text-align: left !important; }
+  header.hero-header .proof-item,
+  header.hero-header .proof-item.proof-wide{
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 
 
